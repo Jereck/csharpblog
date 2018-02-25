@@ -1,15 +1,14 @@
 body{
-    background-color: #E8E8E8;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
 
 .header {
-    height: 150px;
+    height: 200px;
     text-align: center;
 }
-.title, .subtitle {
-    margin-top: 50px;
+.title{
+    padding-top: 50px;
 }
 
 .goal-list {
@@ -21,7 +20,7 @@ body{
 }
 
 .goal-list li .fas {
-    color: green;
+    color: #006351;
 }
 
 /* NAVIGATION */
