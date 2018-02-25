@@ -83,3 +83,9 @@ body{
 .new-post-container {
     display: inline;
 }
+
+
+.blog-date{
+    opacity: 0.5;
+    font-size: 14px;
+}

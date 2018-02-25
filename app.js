@@ -2,6 +2,7 @@ const   express     = require('express'),
         bodyParser  = require('body-parser'),
         BlogPost    = require('./models/blogpost'),
         User        = require('./models/user'),
+        Comment     = require('./models/comment'),
         mongoose    = require('mongoose'),
         passport    = require('passport'),
         LocalStrategy = require('passport-local'),
@@ -37,6 +38,7 @@ app.use(function(req, res, next){
     next();
 });
 
+
 app.get("/", function(req, res){
     res.render("index");
 });
@@ -60,7 +62,6 @@ app.post("/blog", isLoggedIn, function(req, res){
             newlyCreated.author.id = req.user._id;
             newlyCreated.author.username = req.user.username;
             newlyCreated.save();
-            console.log(newlyCreated);
             res.redirect("/blog");
         }
     });
@@ -133,13 +134,16 @@ app.get("/logout", function(req, res){
     res.redirect("/");
 });
 
-
 app.get("/success", function(req, res){
     res.render("success");
 });
 
 app.get("/failure", function(req, res){
     res.render("failure");
+});
+
+app.get("/admin", function(req, res){
+    res.render("admin");
 });
 
 // MIDDLEWARE

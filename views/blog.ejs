@@ -1,6 +1,6 @@
 <% include partials/header %>
 
-    <div class="container">
+    <div class="container custom-container">
         <% if(currentUser){ %>
             <div class="card">
                 <div class="card-header">
@@ -14,15 +14,14 @@
         <div class="custom-container">
             <% blogPost.forEach(function(blogPost){ %>
                 <div class="row"> 
-                    <div class="col-md-8 blog-posting">
-                        <h2><%= blogPost.title %></h2>
-                        <h4>By <%= blogPost.author.username %></h4>
-                        <hr />
-                        <h5><em><%= blogPost.created.toDateString() %></em></h5>
+                    <div class="col blog-posting">
+                        <h2><strong><%= blogPost.title %></strong></h2>
+                        <h5>By <%= blogPost.author.username %></h5>
                         <hr />
                         <p>
-                            <%- blogPost.content.substring(0, 400) %> ...
+                            <%- blogPost.content.substring(0, 200) %> ...
                         </p>
+                        <p class="blog-date"><em><%= blogPost.created.toDateString() %></em></p>                        
                         <a href="/blog/<%= blogPost._id %>" class="btn btn-primary">More</a>
                         <% if(currentUser){ %>
                         <form class="delete-button" action="/blog/<%= blogPost._id %>?_method=DELETE" method="POST">
