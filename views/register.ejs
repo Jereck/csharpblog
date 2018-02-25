@@ -1,0 +1,28 @@
+<% include partials/header %>
+
+    <div class="container custom-container">
+        <h1>Register</h1>
+        <form action="/register" method="POST">
+            <div class="form-group">
+                <input type="text" name="username" class="form-control" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="firstName" class="form-control" placeholder="First Name">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="lastName" class="form-control" placeholder="Last Name">
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary">Sign Up</button>
+        </form>
+    </div>
+
+<% include partials/footer %>

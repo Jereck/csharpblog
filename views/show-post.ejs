@@ -1,0 +1,16 @@
+<% include partials/header %>
+
+<div class="container custom-container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1><%= blogPost.title %></h1>
+            <p><em><%= blogPost.created.toDateString() %></em></p>
+            <hr />
+            <p><%- blogPost.content %><p>
+            <hr />
+            <p>Posted by: <%= blogPost.author.username %></p>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>
