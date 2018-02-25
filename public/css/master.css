@@ -4,17 +4,12 @@ body{
     font-size: 16px;
 }
 
-.hero {
-    background-image: url("/images/hero.jpg");
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    color: white;
-    text-align: right;
-    padding-right: 50px;
-    overflow: hidden;
+.header {
+    height: 150px;
+    text-align: center;
+}
+.title, .subtitle {
+    margin-top: 50px;
 }
 
 .goal-list {
